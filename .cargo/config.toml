@@ -3,3 +3,5 @@
 g = "run --profile fast -p fn-app --bin fortnite-rs"
 # same for the lobby exe
 gl = "run --profile fast -p fn-app --bin fortnite-lobby"
+# minimal browser/WASM scaffold: proves the target is reachable before the native game logic blocks it
+web = "build --target wasm32-unknown-unknown -p fn-web-demo"

@@ -1,0 +1,18 @@
+[package]
+name = "fn-web-demo"
+version.workspace = true
+edition.workspace = true
+description = "Minimal WASM browser scaffold for Fortnite-Rust to test the first step of a browser port"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+console_error_panic_hook = "0.1"
+console_log = "1"
+log = "0.4"
+wasm-bindgen = "0.2"
+web-sys = { version = "0.3", features = ["console", "Document", "Element", "HtmlCanvasElement", "Node", "Window"] }
+
+[profile.release]
+panic = "abort"
